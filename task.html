@@ -1,0 +1,522 @@
+<!--------------------------------- Task 1: Simple Programs todo for variables  ------------------------------->
+
+1.Declare four variables without assigning values and print them in console.
+
+
+let var1, var2, var3, var4;
+
+<!-- Print the values of the variables to the console -->
+console.log(var1);
+console.log(var2);
+console.log(var3);
+console.log(var4);
+
+
+-----------------------------------------------------------------------------------------
+
+
+2.How to get value of the variable myvar as output.
+
+
+let myvar = "Hello World!";
+
+console.log(myvar);
+
+-------------------------------------------------------------------------------------------------------------
+
+3.Declare variables to store your first name, last name, marital status, country and age in multiple lines
+
+
+let firstName = "VBP";
+let lastName = "VBP";
+let maritalStatus = "Single";
+let country = "India";
+let age = 23;
+
+-------------------------------------------------------------------------------------------------------------
+
+4.Declare variables to store your first name, last name, marital status, country and age in a single line
+
+let firstName = "VBP", lastName = "VBP", maritalStatus = "Single", country = "India", age = 23;
+
+-------------------------------------------------------------------------------------------------------------
+
+
+5.Declare variables and assign string, boolean, undefined and null data types
+
+let myAge = 23; // Assign a number data type
+let myName = "VBP"; // Assign a string data type
+let isMarried = false; // Assign a boolean data type
+let yourAge; // Assign an undefined data type
+let myJob = null; // Assign a null data type
+
+console:- 
+
+console.log("I am " + myAge + " years old.");
+console.log("You are " + yourAge + " years old."); // The value of yourAge is undefined, which will be converted to a string "undefined"
+
+-------------------------------------------------------------------------------------------------------------
+
+6. Convert the string to integer
+
+parseInt()
+Number()
+Plus sign(+)
+
+let myString = "23"; // Declare a string variable
+
+// Convert the string to an integer using parseInt()
+let converted1 = parseInt(myString);
+
+// Convert the string to an integer using Number()
+let converted2 = Number(myString);
+
+// Convert the string to an integer using the plus sign operator (+)
+let converted3 = +myString;
+
+// Print the converted values to the console
+console.log(converted1); // Output: 23
+console.log(converted2); // Output: 23
+console.log(converted3); // Output: 23
+
+-------------------------------------------------------------------------------------------------------------
+
+7. Write 6 statement which provide truthy & falsey values.
+
+<!-- Truthy values: -->
+=>5 > 3 - The expression is true, so it is a truthy value.
+=>"hello" - A non-empty string is always truthy.
+=>[] - An empty array is still an object and is truthy.
+
+<!-- Falsy values: -->
+=>0 - Zero is falsy in JavaScript.
+=>null - Null is falsy in JavaScript.
+=>"" - An empty string is falsy in JavaScript.
+
+<!-- example -->
+let myVar = "hello";
+if (myVar) {
+  console.log("The value of myVar is truthy.");
+} else {
+  console.log("The value of myVar is falsy.");
+}
+
+<!-- example -->
+let myVar = null;
+if (myVar) {
+  console.log("The value of myVar is truthy.");
+} else {
+  console.log("The value of myVar is falsy.");
+}
+
+-----------------------------------------------------------------------------------------
+
+8.Find area of a triangle.
+
+function triangleArea(base, height) {
+    let area = 0.5 * base * height;
+    return area;
+  }
+  
+  // Example usage:
+  let base = 10;
+  let height = 5;
+  let area = triangleArea(base, height);
+  console.log("The area of the triangle is: " + area);
+  
+
+<!---------------- Task 2: Simple Programs todo for Operators ------------------------------->
+
+1.Square of a number
+
+let num = 5; 
+let square = num * num; 
+
+console.log("The square of " + num + " is " + square + "."); 
+
+Output: The square of 5 is 25.
+
+
+-------------------------------------------------------------------------------------------------------------
+
+
+2.Swapping 2 numbers
+
+let a = 5; 
+let b = 8;
+console.log("Before swapping: a = " + a + ", b = " + b + ".");
+//Before swapping:a=5,b=8.
+
+let temp = a; 
+a = b; 
+b = temp; 
+
+console.log("After swapping: a = " + a + ", b = " + b + ".");
+
+output:
+After swapping: a=8,b=5.
+
+
+-------------------------------------------------------------------------------------------------------------
+
+
+3.Addition of 3 numbers
+
+let num1 = 5; 
+let num2 = 10;
+let num3 = 15; 
+
+let sum = num1 + num2 + num3; 
+
+console.log("The sum of " + num1 + ", " + num2 + ", and " + num3 + " is " + sum + "."); 
+
+Output: The sum of 5, 10, and 15 is 30.
+
+-------------------------------------------------------------------------------------------------------------
+
+
+4.Calculate Batting Average
+
+let runs = 250; 
+let time = 6;  
+
+let Average = runs / time; 
+
+console.log("The batting average is " + Average.toFixed(2) + "."); 
+
+Output: The batting average is 41.67.
+
+-------------------------------------------------------------------------------------------------------------
+
+
+5.Calculate Simple Interest
+
+let principal = 10000; 
+let rate = 8; 
+let time = 2; 
+
+let Interest = (principal * rate * time) / 100; 
+
+console.log("The simple interest is " + Interest.toFixed(2) + "."); 
+
+Output: The simple interest is 1600.00.
+
+-------------------------------------------------------------------------------------------------------------
+
+6.Give the Actual cost and Sold cost, Calculate Discount Of Product
+
+let actualPrice = 1000;
+let soldPrice = 750; 
+
+let discount = ((actualPrice - soldPrice) / actualPrice) * 100; 
+
+console.log("The discount percentage is " + discount.toFixed(2) + "%."); 
+
+Output: The discount percentage is 25.00%.
+
+
+-------------------------------------------------------------------------------------------------------------
+
+
+7.Display the asterisk pattern as shown below(No loop needed):
+*****
+*****
+*****
+*****
+*****
+
+let pattern = "*****\n";
+console.log(pattern.repeat(5));
+
+
+-------------------------------------------------------------------------------------------------------------
+
+
+
+8.Program To Calculate CGPA
+
+
+let courses = [
+  { name: "Course 1", grade: "A", credits: 4 },
+  { name: "Course 2", grade: "B+", credits: 3 },
+  { name: "Course 3", grade: "A-", credits: 3 },
+  { name: "Course 4", grade: "C+", credits: 2 },
+  { name: "Course 5", grade: "A", credits: 3 },
+];
+
+function gradeToPoint(grade) {
+  switch (grade) {
+    case "A":
+      return 4.0;
+    case "A-":
+      return 3.7;
+    case "B+":
+      return 3.3;
+    case "B":
+      return 3.0;
+    case "B-":
+      return 2.7;
+    case "C+":
+      return 2.3;
+    case "C":
+      return 2.0;
+    case "C-":
+      return 1.7;
+    case "D+":
+      return 1.3;
+    case "D":
+      return 1.0;
+    case "F":
+      return 0.0;
+    default:
+      return null;
+  }
+}
+
+
+let totalGradePoints = 0;
+let totalCredits = 0;
+for (let i = 0; i < courses.length; i++) {
+  let course = courses[i];
+  let gradePoint = gradeToPoint(course.grade);
+  if (gradePoint !== null) {
+    totalGradePoints += gradePoint * course.credits;
+    totalCredits += course.credits;
+  }
+}
+let gpa = totalGradePoints / totalCredits;
+
+
+let totalCreditHours = 15;
+let cgpa = gpa * (totalCreditHours / totalCredits);
+
+Output the GPA and CGPA to the console
+console.log("GPA: " + gpa.toFixed(2));
+console.log("CGPA: " + cgpa.toFixed(2));
+
+
+-------------------------------------------------------------------------------------------------------------
+
+
+
+9.Write a loop that makes seven calls to console.log to output the following triangle:
+#
+##
+###
+####
+#####
+######
+#######
+
+for (let line = "#"; line.length <= 7; line += "#") {
+    console.log(line);
+  }
+  
+
+
+
+-------------------------------------------------------------------------------------------------------------
+
+
+10.Add Mr or Ms to the names in the friends array.
+
+let friends = ["Sai", "Madav", "Kiran", "Neeraj"];
+
+for (let i = 0; i < friends.length; i++) {
+  if (i % 2 === 0) {
+    friends[i] = "Mr " + friends[i];
+  } else {
+    friends[i] = "Ms " + friends[i];
+  }
+}
+
+console.log(friends);
+
+O/P: [ 'Mr Sai', 'Ms Madav', 'Mr Kiran', 'Ms Neeraj' ]
+
+-------------------------------------------------------------------------------------------------------------
+
+<!-- GUVI: Zen Class — Part 1: Find the culprits and nail them — debugging javascript -->
+
+1.
+<!DOCTYPE html>
+<html>
+<body>
+ <script>
+ alert("I'm JavaScript!");  //{alert( “I’m JavaScript!’);} "ERROR"
+ </script>
+ Whats the error in this ?
+</body>
+</html>
+
+-------------------------------------------------------------------------------------------------------------
+
+
+2.
+<!DOCTYPE html>
+<html>
+<body>
+ <script src="script.js"></script>         
+</body>
+</html>
+
+<!-- script.js
+alert("I'm invoked!"); -->
+
+<!-- ERROR
+{ <script src=”script.js”></script>} -->
+
+-------------------------------------------------------------------------------------------------------------
+
+
+
+3.
+Explain the below how it works
+
+explain.html
+
+<!DOCTYPE html>
+<html>
+<body>
+ <script src=”script.js”></script>
+</body>
+</html>
+script.js
+
+alert("I'm JavaScript!");
+alert('Hello') // this line is not having semicolon
+alert(`World`)
+alert(3 + 1 + 2); // this is multiple line code and its working
+
+ans:the code will load the HTML page and execute the JavaScript code in script.js, displaying a series of alert dialog boxes with the messages "I'm JavaScript!", "Hello", "World", and "6".
+
+-------------------------------------------------------------------------------------------------------------
+
+
+4.
+
+<!DOCTYPE html>
+<html>
+<body>
+ <script src="script.js"></script>
+</body>
+</html>
+
+// script.js
+let admin = 9;
+let fname = 10.5; 
+fname = "Guvi";
+let lname = "geek";
+admin = fname + " " + lname;
+alert(admin); // "Guvi geek"
+
+
+<!-- ERROR
+<script src=”script.js”></script> -->
+
+
+-------------------------------------------------------------------------------------------------------------
+
+
+
+5.
+
+<!DOCTYPE html>
+<html>
+<body>
+ <script src="script.js"></script>
+</body>
+</html>
+
+// script.js
+let fname = 10.5; 
+fname = "Guvi";
+let lname = "geek";
+let name = fname + lname;
+alert(`hello ${name}`); // "hello Guvi geek"
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+6.
+
+<!DOCTYPE html>
+<html>
+<body>
+ <script src="script.js"></script>
+</body>
+</html>
+
+// script.js
+let a = prompt("First number?");
+let b = prompt("Second number?");
+let sum = parseInt(a) + parseInt(b);
+alert(sum);
+
+
+-------------------------------------------------------------------------------------------------------------
+
+
+
+7.
+<!DOCTYPE html>
+<html>
+<body>
+ <script src="script.js"></script>
+</body>
+</html>
+
+// script.js
+let a = prompt("First number?");
+let b = prompt("Second number?");
+let sum = Number(a) + Number(b);
+alert(sum);
+
+-------------------------------------------------------------------------------------------------------------
+
+
+
+8.
+
+
+<!DOCTYPE html>
+<html>
+<body>
+ <script src="script.js"></script>
+</body>
+</html>
+
+// script.js
+var a = "12" > "2";
+if (a) {
+  console.log("Code is Blasted")
+}
+else {
+  console.log("Diffused") 
+}
+
+ans:With this correction, the code will display "Diffused" in the console because the expression "12" > "2" evaluates to true.
+
+-------------------------------------------------------------------------------------------------------------
+
+
+9.
+
+<!DOCTYPE html>
+<html>
+<body>
+ <script src="script.js"></script>
+</body>
+</html>
+
+// script.js
+let a = prompt("Enter a number?");
+if (Number(a)) {
+ console.log('OMG it works for any number inc 0');
+}
+else {
+ console.log("Success");
+}
+
+ans:With this modification, the code will display "OMG it works for any number inc 0" in the console when the user enters a number (including 0), and "Success" when the user enters a non-numeric value or cancels the prompt.
